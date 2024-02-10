@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Menú lateral -->
+    <div class="sidebar">
+        <h2>Categorías</h2>
+        <ul>
+            <li class="category">Animales de Bosque
+                <ul>
+                    <li class="product">
+                        <img src="productos/productos/banderin/banderin01.jpg" alt="Banderín">
+                        <a href="productos/productos/banderin/banderin.html"
+                            onclick="realizarCompra('Banderín')">Banderín</a>
+                    </li>
+                    <li class="product">
+                        <img src="productos/productos/banderinAnimales/banderinAnimales01.jpg"
+                            alt="Banderín Animales">
+                        <a href="productos/productos/banderinAnimales/banderinAnimales.html"
+                            onclick="realizarCompra('Banderín Animales')">Banderín Animales</a>
+                    </li>
+                    <li class="product">
+                        <img src="productos/productos/bolsitas/bolsitas01.jpg" alt="Bolsitas">
+                        <a href="productos/productos/bolsitas/bolsitas.html"
+                            onclick="realizarCompra('Bolsitas')">Bolsitas</a>
+                    </li>
+                    <li class="product">
+                        <img src="productos/productos/milkbox/milkbox01.jpg" alt="Milk Box">
+                        <a href="productos/productos/milkbox/milkbox.html"
+                            onclick="realizarCompra('Milk Box')">Milk Box</a>
+                    </li>
+                    <li class="product">
+                        <img src="productos/productos/stickers/stickers01.jpg" alt="Stickers">
+                        <a href="productos/productos/stickers/stickers.html"
+                            onclick="realizarCompra('Stickers')">Stickers</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="content-container">
+        <h1>Bienvenido a Creaciones Saudade</h1>
+        <img src="productos/logo.jpg" alt="Logo" style="width: 100px; height: auto;">
+        <h2>Kits Imprimibles, totalmente personalizables</h2>
+
+        <ul>
+            <li class="product">
+                <img src="productos/productos/banderin/banderin01.jpg" alt="Banderín">
+                <a href="productos/productos/banderin/banderin.html"
+                    onclick="realizarCompra('Banderín')">Banderín</a>
+            </li>
+            <li class="product">
+                <img src="productos/productos/banderinAnimales/banderinAnimales01.jpg" alt="Banderín Animales">
+                <a href="productos/productos/banderinAnimales/banderinAnimales.html"
+                    onclick="realizarCompra('Banderín Animales')">Banderín Animales</a>
+            </li>
+            <li class="product">
+                <img src="productos/productos/bolsitas/bolsitas01.jpg" alt="Bolsitas">
+                <a href="productos/productos/bolsitas/bolsitas.html"
+                    onclick="realizarCompra('Bolsitas')">Bolsitas</a>
+            </li>
+            <li class="product">
+                <img src="productos/productos/milkbox/milkbox01.jpg" alt="Milk Box">
+                <a href="productos/productos/milkbox/milkbox.html"
+                    onclick="realizarCompra('Milk Box')">Milk Box</a>
+            </li>
+            <li class="product">
+                <img src="productos/productos/stickers/stickers01.jpg" alt="Stickers">
+                <a href="productos/productos/stickers/stickers.html"
+                    onclick="realizarCompra('Stickers')">Stickers</a>
+            </li>
+            <!-- Puedes agregar más productos y categorías según sea necesario -->
+        </ul>
+    </div>
+
+    <!-- Incluye el nuevo script -->
+    <script src="js/integracion_paypal.js"></script>
+
+    <script>
+        function realizarCompra(producto) {
+            // Lógica para manejar la compra del producto
+            console.log(`Realizando compra del producto: ${producto}`);
+
+            // Llama a la función de PayPal desde integracion_paypal.js
+            const clientId = "ARvP7z_W-dlMNiMyzj9k0mQUiwhdXW26cvNE0Ul71nyPIdrnfCiypBO0RjCTMy7RgAeOXTSWsapIYpXL";
+            const sellerPayerId = "EHsx1jEr4qeTbmaiWXSGcLd23aK_OC51QHp89uFEOYNuGu9nbbRevqykm7N1O73RU_rVcEzc9LGFG8vh";
+            const jwt = getAuthAssertionValue(clientId, sellerPayerId);
+            console.log(jwt);
+
+            // Lógica adicional para realizar la compra con PayPal...
+        }
+    </script>
+</body>
+
+</html>
