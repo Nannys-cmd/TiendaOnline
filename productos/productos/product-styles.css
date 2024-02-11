@@ -7,7 +7,16 @@
     text-align: center;
   }
   
-  .product-card img {
-    max-width: 100%;
-    height: auto;
-  }
+/* Estilo para las imágenes dentro de las tarjetas de producto */
+.product-card img {
+  width: 50%; /* Hace que la imagen ocupe todo el ancho del contenedor */
+  height: auto; /* Mantiene la proporción original de la imagen */
+  border-radius: 5px; /* Agrega bordes redondeados a la imagen */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Agrega una sombra suave a la imagen */
+  transition: transform 0.3s ease-in-out; /* Agrega una transición suave al efecto de hover */
+}
+
+/* Efecto de hover para las imágenes */
+.product-card img:hover {
+  transform: scale(1.05); /* Hace que la imagen se agrande ligeramente al pasar el cursor sobre ella */
+}
