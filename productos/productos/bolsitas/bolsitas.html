@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bolsitas</title>
-    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="stylesheet" href="../product-styles.css">
 </head>
 <body>
     <h1>Bolsitas</h1>
@@ -21,5 +21,27 @@
         <input type="image" src="https://www.paypalobjects.com/es_XC/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">
         <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
     </form>
+    <!-- Incluye el nuevo script -->
+    <script src="../../../js/integracion_paypal.js"></script>
+
+    <script>
+        // Función para realizar la compra
+        function realizarCompra() {
+            // Lógica para manejar la compra del producto
+            console.log("Realizando compra del producto");
+
+            // Simula el proceso de pago con PayPal
+            setTimeout(function () {
+                // Después de confirmar el pago, muestra el enlace de descarga
+                document.getElementById("downloadLink").style.display = "inline"; // Muestra el enlace de descarga
+            }, 3000); // Tiempo de espera simulado (3 segundos)
+        }
+
+        // Función para simular la descarga del archivo .pptx
+        function realizarDescarga() {
+            // Simula la descarga del archivo .pptx
+            alert("Descargando archivo .pptx...");
+        }
+    </script>
 </body>
 </html>

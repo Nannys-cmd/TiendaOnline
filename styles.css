@@ -23,51 +23,6 @@ nav li {
   margin-right: 20px;
 }
 
-/* Estilos para las tarjetas de producto */
-.product-card {
-  border: 1px solid #ddd;
-  padding: 10px;
-  margin: 10px;
-  width: 200px;
-  text-align: center;
-}
-
-.product-card img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Estilos para el menú lateral */
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 200px;
-  height: 100%;
-  background-color: #f4f4f4;
-  padding: 20px;
-}
-
-.sidebar ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.sidebar ul li {
-  margin-bottom: 10px;
-}
-
-.sidebar ul li a {
-  text-decoration: none;
-  color: #333;
-  display: block;
-}
-
-.sidebar ul li a:hover {
-  color: #555;
-}
-
 /* Estilos para el contenedor de contenido principal */
 .content-container {
   margin-left: 220px; /* Ancho del menú lateral + 20px de espacio adicional */
