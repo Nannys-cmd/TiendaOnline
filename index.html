@@ -9,15 +9,17 @@
 </head>
 
 <body>
+    <!-- Botón para abrir el menú lateral -->
+    <div class="open-menu-btn" onclick="openSidebar()">☰ Abrir menú</div>
+
     <!-- Menú lateral -->
     <div class="sidebar">
         <h2>Categorías</h2>
         <ul>
             <li class="category">Animales de Bosque
-                <ul>
+                <ul class="subcategory">
                     <li class="product">
-                        <a href="productos/productos/banderin/banderin.html"
-                            onclick="realizarCompra('Banderín')">Banderín</a>
+                        <a href="productos/productos/banderin/banderin.html" onclick="realizarCompra('Banderín')">Banderín</a>
                     </li>
                     <li class="product">
                         <a href="productos/productos/banderinAnimales/banderinAnimales.html"
@@ -78,6 +80,20 @@
     <script src="js/integracion_paypal.js"></script>
 
     <script>
+        // Obtén el elemento del menú lateral
+        var sidebar = document.querySelector('.sidebar');
+
+        // Función para abrir el menú lateral
+        function openSidebar() {
+            sidebar.classList.add('open');
+        }
+
+        // Función para cerrar el menú lateral
+        function closeSidebar() {
+            sidebar.classList.remove('open');
+        }
+
+        // Función para realizar la compra
         function realizarCompra(producto) {
             // Lógica para manejar la compra del producto
             console.log(`Realizando compra del producto: ${producto}`);
@@ -91,6 +107,8 @@
             // Lógica adicional para realizar la compra con PayPal...
         }
     </script>
+    <script src="menu.js"></script>
+
 </body>
 
 </html>

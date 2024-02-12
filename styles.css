@@ -1,31 +1,73 @@
-/* Estilos para el cuerpo de la página */
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
 /* Estilos para el encabezado */
 header {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
   background-color: #f2f2f2;
   padding: 10px;
 }
 
-/* Estilos para la barra de navegación */
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.sidebar {
+  width: 220px; /* Ancho del menú lateral */
+  background-color: #f4f4f4;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow-x: hidden; /* Oculta el desplazamiento horizontal */
 }
 
-nav li {
-  display: inline;
-  margin-right: 20px;
+.category {
+  list-style: none;
+  margin-bottom: 10px;
 }
 
-/* Estilos para el contenedor de contenido principal */
+.category > ul {
+  display: none; /* Oculta las subcategorías por defecto */
+}
+
+.category.active > ul {
+  display: block; /* Muestra las subcategorías cuando la categoría está activa */
+}
+
+.category > a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  cursor: pointer;
+}
+
+.category > a:hover {
+  color: #555;
+}
+
+.subcategory {
+  margin-left: 10px; /* Ajusta la indentación de las subcategorías */
+}
+
+.product {
+  margin-left: 20px; /* Ajusta la indentación de los productos */
+}
+
+/* Agrega estilos adicionales según sea necesario */
+
+
+/* Estilos para el contenido principal */
 .content-container {
   margin-left: 220px; /* Ancho del menú lateral + 20px de espacio adicional */
   margin-top: 20px;
   padding: 20px;
+}
+
+/* Estilos para los productos */
+.product {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+/* Establecer un tamaño fijo para las imágenes de los productos */
+.product img {
+  width: 100px; /* Tamaño deseado */
+  height: auto;
 }
