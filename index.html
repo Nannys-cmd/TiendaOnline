@@ -13,75 +13,67 @@
     <div class="sidebar">
         <h2>Categorías</h2>
         <ul>
-            <li class="category">Animales de Bosque
+            <li class="category">
+                <a href="#" class="category-link">Animales de Bosque
                 <ul class="subcategory">
-                    <li class="product">
-                        <a href="productos/productos/banderin/banderin.html"
-                            onclick="realizarCompra('Banderín')">Banderín</a>
-                    </li>
-                    <li class="product">
-                        <a href="productos/productos/banderinAnimales/banderinAnimales.html"
-                            onclick="realizarCompra('Banderín Animales')">Banderín Animales</a>
-                    </li>
-                    <li class="product">
-                        <a href="productos/productos/bolsitas/bolsitas.html"
-                            onclick="realizarCompra('Bolsitas')">Bolsitas</a>
-                    </li>
-                    <li class="product">
-                        <a href="productos/productos/milkbox/milkbox.html" onclick="realizarCompra('Milk Box')">Milk
-                            Box</a>
-                    </li>
-                    <li class="product"><a href="productos/productos/stickers/stickers.html"
-                            onclick="realizarCompra('Stickers')">Stickers</a>
-                    </li>
+                    <li class="product"><a href="productos/productos/banderin/banderin.html">Banderín</a></li>
+                    <li class="product"><a href="productos/productos/banderinAnimales/banderinAnimales.html">Banderín Animales</a></li>
+                    <li class="product"><a href="productos/productos/bolsitas/bolsitas.html">Bolsitas</a></li>
+                    <li class="product"><a href="productos/productos/milkbox/milkbox.html">Milk Box</a></li>
+                    <li class="product"><a href="productos/productos/stickers/stickers.html">Stickers</a></li>
                 </ul>
             </li>
-            <li class="category">Arco Iris
+            <li class="category">
+                <a href="#" class="category-link">Arco Iris
                 <ul class="subcategory">
-                    <li class="product">
-                        <a href="productos/productos2/banderin/banderin.html" onclick="realizarCompra('Banderin')">Banderin</a>
-                    </li>
-                    <li class="product">Producto 2</li>
+                    <li class="product"><a href="productos/productos2/banderin/banderin.html">Banderin</a></li>
                     <!-- Agrega más productos de la categoría "Arco Iris" aquí -->
                 </ul>
             </li>
         </ul>
     </div>
+    
+    
 
     <!-- Contenido principal -->
     <div class="content-container">
         <h1>Bienvenidos a Creaciones Saudade</h1>
         <img src="productos/logo.jpg" alt="Logo" style="width: 100px; height: auto;">
         <h2>Kits Imprimibles, totalmente personalizables</h2>
-
-        <ul>
-            <li class="product">
+    
+        <div class="products-grid">
+            <div class="product">
                 <img src="productos/productos/banderin/banderin01.jpg" alt="Banderín">
-                <a href="productos/productos/banderin/banderin.html" onclick="realizarCompra('Banderín')">Banderín</a>
-            </li>
-            <li class="product">
+                <h3>Banderín</h3>
+                <a href="productos/productos/banderin/banderin.html" onclick="realizarCompra('Banderín')">Comprar</a>
+            </div>
+            <div class="product">
                 <img src="productos/productos/banderinAnimales/banderinAnimales01.jpg" alt="Banderín Animales">
-                <a href="productos/productos/banderinAnimales/banderinAnimales.html"
-                    onclick="realizarCompra('Banderín Animales')">Banderín Animales</a>
-            </li>
-            <li class="product">
+                <h3>Banderín Animales</h3>
+                <a href="productos/productos/banderinAnimales/banderinAnimales.html" onclick="realizarCompra('Banderín Animales')">Comprar</a>
+            </div>
+            <div class="product">
                 <img src="productos/productos/bolsitas/bolsitas01.jpg" alt="Bolsitas">
-                <a href="productos/productos/bolsitas/bolsitas.html" onclick="realizarCompra('Bolsitas')">Bolsitas</a>
-            </li>
-            <li class="product">
+                <h3>Bolsitas</h3>
+                <a href="productos/productos/bolsitas/bolsitas.html" onclick="realizarCompra('Bolsitas')">Comprar</a>
+            </div>
+            <div class="product">
                 <img src="productos/productos/milkbox/milkbox01.jpg" alt="Milk Box">
-                <a href="productos/productos/milkbox/milkbox.html" onclick="realizarCompra('Milk Box')">Milk Box</a>
-            </li>
-            <li class="product">
+                <h3>Milk Box</h3>
+                <a href="productos/productos/milkbox/milkbox.html" onclick="realizarCompra('Milk Box')">Comprar</a>
+            </div>
+            <div class="product">
                 <img src="productos/productos/stickers/stickers01.jpg" alt="Stickers">
-                <a href="productos/productos/stickers/stickers.html" onclick="realizarCompra('Stickers')">Stickers</a>
-            </li>
-            <li class="product">
+                <h3>Stickers</h3>
+                <a href="productos/productos/stickers/stickers.html" onclick="realizarCompra('Stickers')">Comprar</a>
+            </div>
+            <div class="product">
                 <img src="productos/productos2/banderin/banderin01.jpg" alt="Banderin ArcoIris">
-                <a href="productos/productos2/banderin/banderin.html" onclick="realizarCompra('Stickers')">Banderin</a>
-            </li>
-            <!-- Puedes agregar más productos y categorías según sea necesario -->
-        </ul>
+                <h3>Banderin ArcoIris</h3>
+                <a href="productos/productos2/banderin/banderin.html" onclick="realizarCompra('Banderin ArcoIris')">Comprar</a>
+            </div>
+            <!-- Puedes agregar más productos según sea necesario -->
+        </div>
     </div>
 
     <!-- Incluye el nuevo script -->

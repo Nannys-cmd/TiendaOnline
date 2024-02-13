@@ -3,35 +3,34 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
+  padding: 50px;
+  background-color: #f4f4f4;
+  margin-bottom: 50px; /* Añade un margen inferior para separar el encabezado del contenido principal */
 }
 
 .logo {
-  margin-bottom: 20px; /* Ajusta el margen inferior del logo según sea necesario */
+  margin-bottom: 50px; /* Ajusta el margen inferior del logo según sea necesario */
 }
 
+/* Estilos para el sidebar */
 .sidebar {
-  width: 220px; /* Ancho del menú lateral */
+  width: 220px;
   background-color: #f4f4f4;
   padding: 20px;
   position: fixed;
   top: 0;
   left: 0;
   height: 100%;
-  overflow-x: hidden; /* Oculta el desplazamiento horizontal */
+  overflow-x: hidden;
 }
 
 .category {
   list-style: none;
   margin-bottom: 10px;
-}
-
-.category > ul {
-  display: none; /* Oculta las subcategorías por defecto */
-}
-
-.category.active > ul {
-  display: block; /* Muestra las subcategorías cuando la categoría está activa */
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
 }
 
 .category > a {
@@ -39,36 +38,102 @@ header {
   color: #333;
   display: block;
   cursor: pointer;
+  position: relative;
 }
 
-.category > a:hover {
-  color: #555;
+.category > a::after {
+  content: "▼";
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: all 0.3s;
+}
+
+.category.active > a::after {
+  transform: rotate(180deg);
+}
+
+.category > ul {
+  display: none;
+  margin-top: 10px;
+}
+
+.category.active > ul {
+  display: block;
 }
 
 .subcategory {
-  margin-left: 10px; /* Ajusta la indentación de las subcategorías */
+  margin-left: 10px;
 }
 
-.product {
-  margin-left: 20px; /* Ajusta la indentación de los productos */
+.sidebar .product {
+  margin-left: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.sidebar .product h3 {
+  margin-top: 0;
+}
+
+.sidebar .product img {
+  display: block;
+  margin: 10px auto;
 }
 
 /* Estilos para el contenido principal */
 .content-container {
-  margin-left: 240px; /* Ancho del menú lateral + 20px de espacio adicional */
-  margin-top: 20px;
-  padding: 20px;
-  text-align: center; /* Centra el texto en el contenido principal */
+  margin-left: 240px;
+  margin-top: 50px;
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Cambia space-between a space-around para distribuir los productos de manera más uniforme */
+  width: calc(100% - 240px); /* Utiliza calc() para restar el ancho del menú lateral del ancho total */
+}
+
+/* Estilos para la cuadrícula de productos */
+.products-grid {
+  display: flex; /* Cambia a flexbox para que los productos se alineen en una fila */
+  flex-wrap: wrap; /* Permite que los productos se envuelvan a la siguiente fila si no hay suficiente espacio */
+  justify-content: space-between; /* Distribuye los productos uniformemente en el espacio disponible */
 }
 
 /* Estilos para los productos */
-.product {
-  display: inline-block;
-  margin-right: 20px;
+.content-container .product {
+  width: calc(33.33% - 20px); /* Ancho dinámico para que haya tres productos por fila con espacio entre ellos */
+  height: 250px; /* Altura fija */
+  border: 2px solid black;
+  padding: 10px;
+  text-align: center;
+  box-sizing: border-box; /* Asegura que el padding y el borde estén incluidos en el ancho y la altura */
+  background-color: #f9f9f9; /* Color de fondo */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: all 0.3s; /* Transición suave de todos los estilos */
+  margin-bottom: 20px;
+  position: relative; /* Para posicionar el botón "comprar" dentro del contenedor */
 }
 
-/* Establecer un tamaño fijo para las imágenes de los productos */
-.product img {
-  width: 100px; /* Tamaño deseado */
+.content-container .product:hover {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño del producto al pasar el mouse */
+}
+
+.content-container .product img {
+  width: 100px;
   height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.content-container .product p {
+  margin-bottom: 0;
+}
+
+/* Ajusta el ancho de los productos según sea necesario */
+@media (max-width: 768px) {
+  .content-container .product {
+    width: calc(50% - 20px); /* Dos productos por fila en dispositivos más pequeños */
+  }
 }
