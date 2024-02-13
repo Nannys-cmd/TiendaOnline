@@ -1,3 +1,13 @@
+/* Cambia la fuente de todo el documento */
+body {
+  font-family: Arial, sans-serif; /* Cambia esto a la fuente que prefieras */
+}
+
+/* Cambia el color de fondo de todo el documento */
+body {
+  background-color: sandybrown; /* Cambia esto al color que prefieras */
+}
+
 /* Estilos para el encabezado */
 header {
   display: flex;
@@ -6,7 +16,7 @@ header {
   justify-content: center;
   text-align: center;
   padding: 50px;
-  background-color: #f4f4f4;
+  background-color: sandybrown;
   margin-bottom: 50px; /* Añade un margen inferior para separar el encabezado del contenido principal */
 }
 
@@ -17,7 +27,7 @@ header {
 /* Estilos para el sidebar */
 .sidebar {
   width: 220px;
-  background-color: #f4f4f4;
+  background-color: salmon;
   padding: 20px;
   position: fixed;
   top: 0;
@@ -35,7 +45,7 @@ header {
 
 .category > a {
   text-decoration: none;
-  color: #333;
+  color: black;
   display: block;
   cursor: pointer;
   position: relative;
@@ -68,7 +78,7 @@ header {
 
 .sidebar .product {
   margin-left: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid black;
   padding: 10px;
   margin-bottom: 10px;
 }
@@ -85,7 +95,7 @@ header {
 /* Estilos para el contenido principal */
 .content-container {
   margin-left: 240px;
-  margin-top: 50px;
+  margin-top: 10px;
   padding: 50px;
   display: flex;
   flex-wrap: wrap;
@@ -95,6 +105,8 @@ header {
 
 /* Estilos para la cuadrícula de productos */
 .products-grid {
+  margin-top: 10px;
+  padding: 50px;
   display: flex; /* Cambia a flexbox para que los productos se alineen en una fila */
   flex-wrap: wrap; /* Permite que los productos se envuelvan a la siguiente fila si no hay suficiente espacio */
   justify-content: space-between; /* Distribuye los productos uniformemente en el espacio disponible */
@@ -108,7 +120,7 @@ header {
   padding: 10px;
   text-align: center;
   box-sizing: border-box; /* Asegura que el padding y el borde estén incluidos en el ancho y la altura */
-  background-color: #f9f9f9; /* Color de fondo */
+  background-color: khaki; /* Color de fondo */
   border-radius: 10px; /* Bordes redondeados */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
   transition: all 0.3s; /* Transición suave de todos los estilos */
