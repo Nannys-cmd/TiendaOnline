@@ -1,3 +1,13 @@
+/* Cambia la fuente de todo el documento */
+body {
+  font-family: 'Caveat', cursive; /* Fuente cursiva */
+}
+
+/* Cambia el color de fondo de todo el documento */
+body {
+  background-color: sandybrown; /* Cambia esto al color que prefieras */
+}
+
 /* Estilos para las tarjetas de producto */
 .product-card {
     border: 1px solid #ddd;
