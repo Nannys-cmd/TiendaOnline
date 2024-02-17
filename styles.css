@@ -3,26 +3,41 @@ body {
   font-family: 'Caveat', cursive; /* Fuente cursiva */
 }
 
-/* Cambia el color de fondo de todo el documento */
+/* Cambia la fuente y el color de fondo de todo el documento */
 body {
-  background-color: sandybrown; /* Cambia esto al color que prefieras */
+  font-family: 'Caveat', cursive; /* Fuente cursiva */
+  background-color: sandybrown; /* Color de fondo */
 }
 
 /* Estilos para el encabezado */
 header {
+  font-family: 'Protest Riot', sans-serif;
+  background-color: sandybrown;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Estilos para el contenedor del header */
+.header-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 50px;
-  background-color: sandybrown;
-  margin-bottom: 50px; /* Añade un margen inferior para separar el encabezado del contenido principal */
+  margin-bottom: 20px; /* Ajusta el margen inferior según sea necesario */
 }
 
 .logo {
-  margin-bottom: 50px; /* Ajusta el margen inferior del logo según sea necesario */
+  display: block;
+  margin: 0 auto; /* Esto centra el logo horizontalmente */
 }
+
+/* Estilos para el contenedor del logo */
+.logo-container {
+  display: flex;
+  align-items: center; /* Centra verticalmente los elementos hijos */
+}
+
 
 /* Estilos para el sidebar */
 .sidebar {
@@ -33,14 +48,12 @@ header {
   top: 0;
   left: 0;
   height: 100%;
-  overflow-x: hidden;
+  overflow-y: auto; /* Habilita el desplazamiento vertical si el contenido es más largo que el sidebar */
 }
 
 .category {
   list-style: none;
   margin-bottom: 10px;
-  padding: 10px;
-  border-bottom: 1px solid #ccc;
 }
 
 .category > a {
@@ -95,41 +108,35 @@ header {
 /* Estilos para el contenido principal */
 .content-container {
   margin-left: 240px;
-  margin-top: 10px;
-  padding: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around; /* Cambia space-between a space-around para distribuir los productos de manera más uniforme */
-  width: calc(100% - 240px); /* Utiliza calc() para restar el ancho del menú lateral del ancho total */
+  margin-top: 70px; /* Ajusta el margen superior según sea necesario */
+  padding: 20px;
 }
 
 /* Estilos para la cuadrícula de productos */
 .products-grid {
-  margin-top: 10px;
-  padding: 50px;
-  display: flex; /* Cambia a flexbox para que los productos se alineen en una fila */
-  flex-wrap: wrap; /* Permite que los productos se envuelvan a la siguiente fila si no hay suficiente espacio */
-  justify-content: space-between; /* Distribuye los productos uniformemente en el espacio disponible */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
 }
 
 /* Estilos para los productos */
 .content-container .product {
-  width: calc(33.33% - 20px); /* Ancho dinámico para que haya tres productos por fila con espacio entre ellos */
-  height: 250px; /* Altura fija */
+  flex: 0 1 calc(33.33% - 20px);
+  height: 250px;
   border: 2px solid black;
   padding: 10px;
   text-align: center;
-  box-sizing: border-box; /* Asegura que el padding y el borde estén incluidos en el ancho y la altura */
-  background-color: khaki; /* Color de fondo */
-  border-radius: 10px; /* Bordes redondeados */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  transition: all 0.3s; /* Transición suave de todos los estilos */
-  margin-bottom: 20px;
-  position: relative; /* Para posicionar el botón "comprar" dentro del contenedor */
+  box-sizing: border-box;
+  background-color: khaki;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  position: relative;
 }
 
 .content-container .product:hover {
-  transform: scale(1.05); /* Aumenta ligeramente el tamaño del producto al pasar el mouse */
+  transform: scale(1.05);
 }
 
 .content-container .product img {
@@ -145,7 +152,7 @@ header {
 
 /* Ajusta el ancho de los productos según sea necesario */
 @media (max-width: 768px) {
-  .content-container .product {
-    width: calc(50% - 20px); /* Dos productos por fila en dispositivos más pequeños */
+  .content-container {
+    margin-left: 0;
   }
 }

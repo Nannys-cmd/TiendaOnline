@@ -1,22 +1,27 @@
-/* Cambia la fuente de todo el documento */
+/* Define la fuente para todo el documento */
 body {
   font-family: 'Caveat', cursive; /* Fuente cursiva */
+  background-color: sandybrown; /* Color de fondo */
 }
 
-/* Cambia el color de fondo de todo el documento */
-body {
-  background-color: sandybrown; /* Cambia esto al color que prefieras */
+/* Aplica flexbox al contenedor principal */
+.container {
+  display: flex;
+  flex-direction: column; /* Alinea el contenido verticalmente */
+  align-items: center; /* Centra el contenido horizontalmente */
+  justify-content: center; /* Centra el contenido verticalmente */
+  min-height: 100vh; /* Asegura que el contenedor ocupe al menos el alto de la ventana del navegador */
 }
 
 /* Estilos para las tarjetas de producto */
 .product-card {
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin: 10px;
-    width: 200px;
-    text-align: center;
-  }
-  
+  border: 1px solid sandybrown;
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+  text-align: center;
+}
+
 /* Estilo para las imágenes dentro de las tarjetas de producto */
 .product-card img {
   width: 50%; /* Hace que la imagen ocupe todo el ancho del contenedor */
@@ -30,3 +35,4 @@ body {
 .product-card img:hover {
   transform: scale(1.05); /* Hace que la imagen se agrande ligeramente al pasar el cursor sobre ella */
 }
+
