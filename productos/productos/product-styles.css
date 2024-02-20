@@ -4,13 +4,11 @@ body {
   background-color: sandybrown; /* Color de fondo */
 }
 
-/* Aplica flexbox al contenedor principal */
-.container {
-  display: flex;
-  flex-direction: column; /* Alinea el contenido verticalmente */
-  align-items: center; /* Centra el contenido horizontalmente */
-  justify-content: center; /* Centra el contenido verticalmente */
-  min-height: 100vh; /* Asegura que el contenedor ocupe al menos el alto de la ventana del navegador */
+header a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  margin-right: 20px;
 }
 
 /* Estilos para las tarjetas de producto */
