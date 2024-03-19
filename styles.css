@@ -1,4 +1,4 @@
-/* Cambia la fuente de todo el documento */
+/* Define la fuente para todo el documento */
 body {
   font-family: 'Caveat', cursive; /* Fuente cursiva */
 }
@@ -37,7 +37,6 @@ header {
   display: flex;
   align-items: center; /* Centra verticalmente los elementos hijos */
 }
-
 
 /* Estilos para el sidebar */
 .sidebar {
@@ -155,5 +154,29 @@ header {
   .content-container {
     margin-left: 0;
   }
-}
 
+  /* Estilos para la barra lateral en dispositivos móviles */
+  .sidebar {
+    width: 100%; /* Ancho del 100% para ocupar todo el ancho de la pantalla */
+    height: auto; /* Altura automática para ajustarse al contenido */
+    position: relative; /* Elimina la posición fija para que el contenido pueda desplazarse */
+    padding: 20px; /* Añade un poco de espacio interno */
+    background-color: salmon; /* Color de fondo */
+  }
+
+  .category {
+    margin-bottom: 10px;
+  }
+
+  .category > a::after {
+    display: none; /* Oculta la flecha desplegable en dispositivos móviles */
+  }
+
+  .subcategory {
+    margin-left: 0; /* Elimina el margen izquierdo de las subcategorías */
+  }
+
+  .sidebar .product {
+    margin-left: 0; /* Elimina el margen izquierdo de los productos */
+  }
+}
