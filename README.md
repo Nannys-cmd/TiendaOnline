@@ -12,7 +12,7 @@ Clona este repositorio en tu máquina local usando Git:
 
 bash
 Copy code
-git clone [https://github.com/tu-usuario/tienda-html-estatico.git](https://github.com/Nannys-cmd/TiendaOnline.git )
+git clone https://github.com/Nannys-cmd/TiendaOnline
 Abre el archivo index.html en tu navegador web favorito.
 
 Capturas de pantalla
