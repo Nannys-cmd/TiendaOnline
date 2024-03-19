@@ -1,45 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stickers</title>
+    <title>Banderín</title>
     <link rel="stylesheet" href="../product-styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <a href="../../../index.html">Atrás</a>
     </header>
-    <h1>Stickers</h1>
-    <img src="../stickers/stickers01.jpg" alt="Stickers" style="width: 200px; height: auto;">
-
+    <h1>Banderín</h1>
+    <img src="../banderin/banderin01.jpg" alt="Banderín" style="width: 200px; height: auto;">
+    <img src="../banderin/banderin02.jpg" alt="Banderín" style="width: 200px; height: auto;">
+    <img src="../banderin/banderin03.jpg" alt="Banderín" style="width: 200px; height: auto;">
     <p>Descripción del producto.</p>
-    <a href="#" id="downloadLink" style="display: none;" onclick="realizarDescarga()">Descargar PPTX</a>
-    <p>Precio: $XX.XX</p>
-    <!-- Agrega el botón de pago de PayPal -->
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-        <input type="hidden" name="cmd" value="_s-xclick">
-        <input type="hidden" name="hosted_button_id" value="ID_DEL_BOTON_PAYPAL">
-        <input type="image" src="https://www.paypalobjects.com/es_XC/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">
-        <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
-    </form>
-    <!-- Incluye el nuevo script -->
-    <script src="../../../js/integracion_paypal.js"></script>
+    <p>Precio: $1500</p>
+    
 
+    <!-- Mensaje de espera -->
+    <div id="waitingMessage" style="display: none;">
+        <p>Gracias por tu compra. Por favor, espera mientras procesamos tu pedido...</p>
+    </div>
+
+    <!-- Enlace de descarga -->
+    <div id="downloadLinkContainer" style="display: none;">
+        <a href="#" id="downloadLink" onclick="realizarDescarga()">Descargar PPTX</a>
+    </div>
+
+    <!-- Enlace para realizar la compra con MercadoPago -->
+    <a href="http://link.mercadopago.com.ar/creacionessaudade" target="_blank" onclick="realizarCompraMercadoPago()" class="mercadoPagoButton">Pagar con MercadoPago</a>
+
+    <!-- Script para manejar la compra -->
     <script>
-        // Función para realizar la compra
-        function realizarCompra() {
-            // Lógica para manejar la compra del producto
-            console.log("Realizando compra del producto");
+        // Función para realizar la compra con MercadoPago
+        function realizarCompraMercadoPago() {
+            // Lógica para manejar la compra del producto con MercadoPago
+            console.log("Realizando compra del producto con MercadoPago");
 
-            // Simula el proceso de pago con PayPal
+            // Mostrar el mensaje de espera
+            document.getElementById("waitingMessage").style.display = "block";
+
+            // Simular un tiempo de espera (aquí reemplaza el tiempo con el que desees)
             setTimeout(function () {
-                // Después de confirmar el pago, muestra el enlace de descarga
-                document.getElementById("downloadLink").style.display = "inline"; // Muestra el enlace de descarga
-            }, 3000); // Tiempo de espera simulado (3 segundos)
+                // Ocultar el mensaje de espera y mostrar el enlace de descarga
+                document.getElementById("waitingMessage").style.display = "none";
+                document.getElementById("downloadLinkContainer").style.display = "block";
+            }, 120000); // 2 minutos (120 segundos)
         }
 
         // Función para simular la descarga del archivo .pptx
@@ -49,4 +61,5 @@
         }
     </script>
 </body>
+
 </html>

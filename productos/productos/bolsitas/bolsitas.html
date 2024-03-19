@@ -20,34 +20,44 @@
     <p>Descripción del producto.</p>
     <a href="#" id="downloadLink" style="display: none;" onclick="realizarDescarga()">Descargar PPTX</a>
     <p>Precio: $2500</p>
-    <!-- Agrega el botón de pago de PayPal -->
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-        <input type="hidden" name="cmd" value="_s-xclick">
-        <input type="hidden" name="hosted_button_id" value="ID_DEL_BOTON_PAYPAL">
-        <input type="image" src="https://www.paypalobjects.com/es_XC/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">
-        <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
-    </form>
-    <!-- Incluye el nuevo script -->
-    <script src="../../../js/integracion_paypal.js"></script>
+   
+ <!-- Mensaje de espera -->
+ <div id="waitingMessage" style="display: none;">
+    <p>Gracias por tu compra. Por favor, espera mientras procesamos tu pedido...</p>
+</div>
 
-    <script>
-        // Función para realizar la compra
-        function realizarCompra() {
-            // Lógica para manejar la compra del producto
-            console.log("Realizando compra del producto");
+<!-- Enlace de descarga -->
+<div id="downloadLinkContainer" style="display: none;">
+    <a href="#" id="downloadLink" onclick="realizarDescarga()">Descargar PPTX</a>
+</div>
 
-            // Simula el proceso de pago con PayPal
-            setTimeout(function () {
-                // Después de confirmar el pago, muestra el enlace de descarga
-                document.getElementById("downloadLink").style.display = "inline"; // Muestra el enlace de descarga
-            }, 3000); // Tiempo de espera simulado (3 segundos)
-        }
+<!-- Enlace para realizar la compra con MercadoPago -->
+<a href="http://link.mercadopago.com.ar/creacionessaudade" target="_blank" onclick="realizarCompraMercadoPago()" class="mercadoPagoButton">Pagar con MercadoPago</a>
 
-        // Función para simular la descarga del archivo .pptx
-        function realizarDescarga() {
-            // Simula la descarga del archivo .pptx
-            alert("Descargando archivo .pptx...");
-        }
-    </script>
+<!-- Script para manejar la compra -->
+<script>
+    // Función para realizar la compra con MercadoPago
+    function realizarCompraMercadoPago() {
+        // Lógica para manejar la compra del producto con MercadoPago
+        console.log("Realizando compra del producto con MercadoPago");
+
+        // Mostrar el mensaje de espera
+        document.getElementById("waitingMessage").style.display = "block";
+
+        // Simular un tiempo de espera (aquí reemplaza el tiempo con el que desees)
+        setTimeout(function () {
+            // Ocultar el mensaje de espera y mostrar el enlace de descarga
+            document.getElementById("waitingMessage").style.display = "none";
+            document.getElementById("downloadLinkContainer").style.display = "block";
+        }, 120000); // 2 minutos (120 segundos)
+    }
+
+    // Función para simular la descarga del archivo .pptx
+    function realizarDescarga() {
+        // Simula la descarga del archivo .pptx
+        alert("Descargando archivo .pptx...");
+    }
+</script>
+
 </body>
 </html>

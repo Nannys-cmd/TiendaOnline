@@ -34,3 +34,20 @@ header a {
   transform: scale(1.05); /* Hace que la imagen se agrande ligeramente al pasar el cursor sobre ella */
 }
 
+/* Estilo para el botón de MercadoPago */
+.mercadoPagoButton {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: lightcoral; /* Color de fondo del botón */
+  color: black; /* Color del texto del botón */
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer;
+  transition: background-color 0.3s; /* Transición suave del color de fondo */
+}
+
+.mercadoPagoButton:hover {
+  background-color: lightcoral; /* Cambia el color de fondo al pasar el cursor sobre el botón */
+}

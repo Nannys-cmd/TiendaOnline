@@ -85,34 +85,33 @@
     <!-- Incluye el nuevo script -->
     <script src="js/integracion_paypal.js"></script>
 
-    <script>
-        // Obtén el elemento del menú lateral
-        var sidebar = document.querySelector('.sidebar');
+    <!-- Botón para realizar la compra con MercadoPago -->
+<!-- Contenedor para el enlace de pago con MercadoPago -->
+<div>
+    <a href="http://link.mercadopago.com.ar/creacionessaudade" target="_blank">Pagar con MercadoPago</a>
+</div>
 
-        // Función para abrir el menú lateral
-        function openSidebar() {
-            sidebar.classList.add('open');
-        }
 
-        // Función para cerrar el menú lateral
-        function closeSidebar() {
-            sidebar.classList.remove('open');
-        }
+<script>
+    // Obtén el elemento del menú lateral
+    var sidebar = document.querySelector('.sidebar');
 
-        // Función para realizar la compra
-        function realizarCompra(producto) {
-            // Lógica para manejar la compra del producto
-            console.log(`Realizando compra del producto: ${producto}`);
+    // Función para abrir el menú lateral
+    function openSidebar() {
+        sidebar.classList.add('open');
+    }
 
-            // Llama a la función de PayPal desde integracion_paypal.js
-            const clientId = "ARvP7z_W-dlMNiMyzj9k0mQUiwhdXW26cvNE0Ul71nyPIdrnfCiypBO0RjCTMy7RgAeOXTSWsapIYpXL";
-            const sellerPayerId = "EHsx1jEr4qeTbmaiWXSGcLd23aK_OC51QHp89uFEOYNuGu9nbbRevqykm7N1O73RU_rVcEzc9LGFG8vh";
-            const jwt = getAuthAssertionValue(clientId, sellerPayerId);
-            console.log(jwt);
+    // Función para cerrar el menú lateral
+    function closeSidebar() {
+        sidebar.classList.remove('open');
+    }
 
-            // Lógica adicional para realizar la compra con PayPal...
-        }
-    </script>
+    // Función para realizar la compra (opcional, si necesitas algún manejo adicional)
+    function realizarCompra() {
+        // Lógica para manejar la compra (si es necesario)
+    }
+</script>
+
     <script src="menu.js"></script>
 
 </body>
